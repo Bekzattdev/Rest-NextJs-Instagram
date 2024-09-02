@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+
+  .results {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    box-shadow: inset 0 0 5px rgb(255, 255, 255, 0.1);
+    border-radius: 15;
+  }
+}

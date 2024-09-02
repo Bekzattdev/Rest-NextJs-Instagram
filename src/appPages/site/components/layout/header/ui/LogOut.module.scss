@@ -1,0 +1,37 @@
+.button {
+  background-color: #da22ff; /* Красный цвет для кнопки */
+  color: #fff; /* Белый цвет текста */
+  border: none; /* Убираем стандартные границы */
+  padding: 6px 16px; /* Отступы вокруг текста */
+  border-radius: 4px; /* Закругленные углы */
+  font-size: 16px; /* Размер шрифта */
+  cursor: pointer; /* Указатель курсора как "рука" */
+  transition:
+    background-color 0.3s,
+    transform 0.2s; /* Плавные переходы */
+  display: flex; /* Центрирование текста */
+  align-items: center;
+  justify-content: center;
+}
+
+.button:active {
+  transform: scale(0.98); /* Легкое уменьшение при нажатии */
+}
+
+.spinner {
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Светлый фон для спиннера */
+  border-radius: 50%; /* Округлая форма */
+  border-top: 2px solid #fff; /* Белый верхний ободок */
+  width: 16px; /* Ширина спиннера */
+  height: 16px; /* Высота спиннера */
+  animation: spin 1s linear infinite; /* Анимация вращения */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
