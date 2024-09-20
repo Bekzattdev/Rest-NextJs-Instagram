@@ -3,6 +3,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { useLoginMutation } from "@/redux/api/auth";
 import Link from "next/link";
 
+import styles from "./DesignAuth.module.scss";
 interface IFormInput {
   email: string;
   password: string;
@@ -28,8 +29,9 @@ const SignInPage = () => {
   };
 
   return (
-    <section>
-      <h1>Sign-In Page</h1>
+    <section className={styles["auth"]}>
+      <h1>Instagram</h1>
+
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           placeholder="email"

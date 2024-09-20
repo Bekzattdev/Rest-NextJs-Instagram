@@ -32,14 +32,7 @@ const PostCard: React.FC<IProps> = ({ postItem }) => {
     <div className={scss.postCard}>
       {mediaType === "PHOTO" ? (
         <img src={mediaUrl} alt={caption || "Photo"} />
-      ) : // <Image
-      //   src={mediaUrl}
-      //   alt={caption || "Photo"}
-      //   width={700}
-      //   height={500}
-      //   quality={70}
-      // />
-      mediaType === "VIDEO" ? (
+      ) : mediaType === "VIDEO" ? (
         <video controls>
           <source src={mediaUrl} type="video/mp4" />
           Your browser does not support the video tag.

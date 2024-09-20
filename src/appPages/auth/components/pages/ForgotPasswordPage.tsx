@@ -2,7 +2,8 @@
 import { useForgotMutation } from "@/redux/api/auth";
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-
+import styles from "./DesignAuth.module.scss";
+import Link from "next/link";
 interface IFromForgotPassword {
   email: string;
   frontEndUrl: string;
@@ -27,8 +28,8 @@ const ForgotPasswordPage = () => {
   };
 
   return (
-    <div>
-      <h1>ForgotPasswordPage</h1>
+    <div className={styles["auth"]}>
+      <h2>Забыли пароль</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           placeholder="email"
@@ -36,6 +37,7 @@ const ForgotPasswordPage = () => {
           {...register("email", { required: true })}
         />
         <button type="submit">Отправить письмо сброса</button>
+        <Link href="/auth/sign-up">У вас нету аккаунта?</Link>
       </form>
     </div>
   );

@@ -3,7 +3,7 @@ import React, { Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useResetPasswordMutation } from "@/redux/api/auth";
-
+import styles from "./DesignAuth.module.scss";
 interface IFormResetPassword {
   newPassword: string;
 }
@@ -31,8 +31,8 @@ const ResetPasswordForm = () => {
   };
 
   return (
-    <div>
-      <h1>ResetPasswordPage</h1>
+    <div className={styles["auth"]}>
+      <h1>Сброс пароля</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           placeholder="new password"

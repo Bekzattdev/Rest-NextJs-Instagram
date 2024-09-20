@@ -1,0 +1,168 @@
+$primary-color: #0095f6;
+$background-gradient: linear-gradient(
+  135deg,
+  #f58529,
+  #dd2a7b,
+  #8134af,
+  #515bd4
+);
+$input-background: #262626;
+$input-border-color: #262626;
+$font-color: #fafafa;
+$border-radius: 6px;
+$max-width: 350px;
+
+body {
+  background: $background-gradient;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.auth {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 50vh;
+  width: 100%;
+  max-width: $max-width;
+  padding: 2rem;
+  background-color: #000;
+  border-radius: $border-radius;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+
+  h1 {
+    font-family: "Billabong", cursive;
+    font-size: 2.5rem;
+    color: $font-color;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  h2 {
+    font-family: "Billabong", cursive;
+    font-size: 2.5rem;
+    color: $font-color;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    input {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 0.8rem;
+      border: 1px solid $input-border-color;
+      border-radius: $border-radius;
+      background-color: $input-background;
+      font-size: 0.9rem;
+      color: $font-color;
+
+      &::placeholder {
+        color: #a8a8a8;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: $font-color;
+      }
+    }
+
+    button {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      background-color: $primary-color;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: $border-radius;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+
+    .forgot-password {
+      align-self: flex-end;
+      font-size: 0.8rem;
+      color: $primary-color;
+      text-decoration: none;
+      margin-bottom: 1.5rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .separator {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 1.5rem 0;
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background-color: #dbdbdb;
+    }
+
+    span {
+      margin: 0 1rem;
+      font-size: 0.9rem;
+      color: #8e8e8e;
+    }
+  }
+
+  .facebook-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    a {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+      color: #385185;
+      text-decoration: none;
+      font-weight: 600;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      .icon {
+        margin-right: 0.5rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .sign-up-link {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #8e8e8e;
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

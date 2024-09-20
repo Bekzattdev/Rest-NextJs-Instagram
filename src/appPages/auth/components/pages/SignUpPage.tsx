@@ -2,7 +2,7 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useRegisterMutation } from "@/redux/api/auth";
 import Link from "next/link";
-
+import styles from "./DesignAuth.module.scss";
 interface IFormInput {
   username: string;
   password: string;
@@ -30,8 +30,8 @@ const SignUpPage = () => {
   };
 
   return (
-    <section>
-      <h1>Registration Page</h1>
+    <section className={styles["auth"]}>
+      <h1>Instagram</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           placeholder="username"
@@ -52,7 +52,7 @@ const SignUpPage = () => {
           {...register("password", { required: true })}
         />
         <input placeholder="photo URL" type="text" {...register("photo")} />
-        <button type="submit">Register</button>
+        <button type="submit">Зарегистрироваться</button>
       </form>
       <Link href="/auth/sign-in">У вас уже есть аккаунт?</Link>
     </section>
